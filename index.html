@@ -11,7 +11,119 @@
 </head>
 <body>
 
+
+    <div class="hero">
+        <h1>Customer Reviews</h1>
+        <div class="review-box">
+            <div id="slide">
+                <div class="card">
+                    <div class="profile">
+                        <img src="./Assets/Images/Review_Slider_Img/pic1.jpg" alt="">
+                        <div>
+
+                            <h3>Riley Olie</h3>
+                            <p>Web Designer</p>
+                        </div>
+                    </div>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo eligendi id molestiae vitae necessitatibus, accusantium ipsam minus ut cum ratione velit deserunt, sunt placeat rem. A accusantium beatae, nostrum nemo ut necessitatibus iure, molestias ab officia velit quia adipisci nisi.</p>
+                </div>
+
+                <div class="card">
+                    <div class="profile">
+                        <img src="./Assets/Images/Review_Slider_Img/pic2.jpg" alt="">
+                        <div>
+
+                            <h3>Steve McCurry</h3>
+                            <p>UI/UX Designer</p>
+                        </div>
+                    </div>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo eligendi id molestiae vitae necessitatibus, accusantium ipsam minus ut cum ratione velit deserunt, sunt placeat rem. A accusantium beatae, nostrum nemo ut necessitatibus iure, molestias ab officia velit quia adipisci nisi.</p>
+                </div>
+
+                <div class="card">
+                    <div class="profile">
+                        <img src="./Assets/Images/Review_Slider_Img/pic3.jpg" alt="">
+                        <div>
+
+                            <h3>Merlin Nguyen</h3>
+                            <p>Senior Developer</p>
+                        </div>
+                    </div>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo eligendi id molestiae vitae necessitatibus, accusantium ipsam minus ut cum ratione velit deserunt, sunt placeat rem. A accusantium beatae, nostrum nemo ut necessitatibus iure, molestias ab officia velit quia adipisci nisi.</p>
+                </div>
+
+                <div class="card">
+                    <div class="profile">
+                        <img src="./Assets/Images/Review_Slider_Img/pic4.jpg" alt="">
+                        <div>
+
+                            <h3>Jhon Wiiliams</h3>
+                            <p>Team Lead</p>
+                        </div>
+                    </div>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo eligendi id molestiae vitae necessitatibus, accusantium ipsam minus ut cum ratione velit deserunt, sunt placeat rem. A accusantium beatae, nostrum nemo ut necessitatibus iure, molestias ab officia velit quia adipisci nisi.</p>
+                </div>
+
+
+
+            </div>
+
+<div class="sidebar">
+    <img src="./Assets/Images/Review_Slider_Img/up-arrow.png" alt="" id="upArrow">
+    <img src="./Assets/Images/Review_Slider_Img/down-arrow.png" alt="" id="downArrow">
+
+</div>
+
+        </div>
+    </div>
     
-    
+
+
+
+
+    <script>
+        var slide = document.getElementById('slide')
+        var upArrow = document.getElementById('upArrow')
+        var  downArrow = document.getElementById('downArrow')
+
+        downArrow.style.opacity = 0.2
+
+
+        let x = 0;
+        upArrow.onclick = function(){
+        downArrow.style.opacity = 1
+
+            if(x > '-900'){
+                x = x - 300;
+            slide.style.top = x + 'px';
+            
+            }
+            if(x === -900){
+                upArrow.style.opacity = 0.2
+                console.log('sds')
+            }
+        }
+
+        downArrow.onclick = function(){
+            upArrow.style.opacity = 1
+
+            if(x < 0){
+                x = x + 300;
+            slide.style.top = x + 'px';
+            // downArrow.style.opacity = 0.2
+            
+            }
+            if(x == 0){
+                downArrow.style.opacity = 0.2
+                console.log('ccs')
+            }
+        }
+        
+    </script>
+
 </body>
 </html>
