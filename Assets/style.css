@@ -49,6 +49,7 @@ line-height: 22px;
 box-sizing: border-box;
 background: #fff;
 position: relative;
+z-index: 1;
 }
 .profile{
     display: flex;
@@ -98,4 +99,22 @@ position: relative;
     border-radius: 50%;
     cursor: pointer;
     width: 25px;
+}
+
+.card::before{
+    content: '';
+width: 110px;
+height: 110px;
+border-bottom-right-radius: 100%;
+background: #f44336;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+
+}
+
+::selection{
+    background: #f44336;
+    color: #fff;
 }
